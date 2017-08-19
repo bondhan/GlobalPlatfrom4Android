@@ -355,7 +355,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onPause() {
         super.onPause();
-        if (mNfcAdapter.isEnabled())
+        if (mNfcAdapter != null && mNfcAdapter.isEnabled())
             if (dialog != null) {
                 dialog.dismiss();
             }
