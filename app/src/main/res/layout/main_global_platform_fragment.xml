@@ -27,7 +27,7 @@
             android:id="@+id/log_window_layout"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_weight="0.5"
+            android:layout_weight="0.3"
             android:layout_alignParentBottom="true"
             android:background="@drawable/border"
             android:padding="1dip">

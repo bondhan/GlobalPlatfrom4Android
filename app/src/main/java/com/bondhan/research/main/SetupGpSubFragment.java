@@ -252,7 +252,7 @@ public class SetupGpSubFragment extends Fragment {
                 }
 
                 if (cmd == null || resp == null)
-                    mCallback.appendLogMessage("Search Failed, Not Connected");
+                    Toast.makeText(getActivity(), "Search Failed, Not Connected", Toast.LENGTH_SHORT).show();
                 else
                     mCallback.apduCommLog(cmd, resp.toString());
             }

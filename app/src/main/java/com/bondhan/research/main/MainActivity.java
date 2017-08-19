@@ -44,6 +44,14 @@ public class MainActivity extends AppCompatActivity
     public static final String TAG = "MA:";
     private String history;
 
+    public void setmLogShown(boolean mLogShown) {
+        this.mLogShown = mLogShown;
+    }
+
+    public boolean ismLogShown() {
+        return mLogShown;
+    }
+
     private boolean mLogShown = false;
 
     private SharedPreferences mPrefs;
@@ -91,7 +99,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        GpFragment = (GlobalPlatformMainFragment) fragmentManager.findFragmentById(R.id.MainFragmentGpContent);
+        GpFragment = fragmentManager.findFragmentById(R.id.MainFragmentGpContent);
 
         //Check if the application was loaded before, if not null then we will resume
         if (GpFragment == null) {
@@ -103,7 +111,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
-        fragmentManager.beginTransaction().replace(R.id.MainFragmentGpContent, (Fragment) GpFragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.MainFragmentGpContent, GpFragment).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -213,17 +221,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         if (id == R.id.action_toggle_log)
         {
-            LinearLayout output = (LinearLayout) findViewById(R.id.log_window_layout);
-
-            mLogShown = !mLogShown;
-
-            if (mLogShown) {
-
-                output.setVisibility(LinearLayout.VISIBLE);
-            } else {
-
-                output.setVisibility(LinearLayout.GONE);
-            }
+            showOutputLog(false);
 
             supportInvalidateOptionsMenu();
 
@@ -232,6 +230,21 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void showOutputLog(boolean show) {
+        LinearLayout output = (LinearLayout) findViewById(R.id.log_window_layout);
+
+        mLogShown = !mLogShown;
+
+        if (mLogShown || show) {
+
+            output.setVisibility(LinearLayout.VISIBLE);
+        } else {
+
+            output.setVisibility(LinearLayout.GONE);
+        }
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

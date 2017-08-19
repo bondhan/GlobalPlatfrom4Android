@@ -75,11 +75,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:digits="0123456789ABCDEF"
-                    android:inputType="textCapCharacters"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
                     android:text="@string/default_cm_aid" />
 
                 <Button
                     android:id="@+id/searchCmBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Search"/>
@@ -119,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="0123456789ABCDEF"
-                    android:inputType="textCapCharacters"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
                     android:text="@string/default_gp_key_value" />
 
             </LinearLayout>
@@ -141,7 +142,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="0123456789ABCDEF"
-                    android:inputType="textCapCharacters"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
                     android:text="@string/default_gp_key_value" />
 
             </LinearLayout>
@@ -163,7 +164,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:digits="0123456789ABCDEF"
-                    android:inputType="textCapCharacters"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
                     android:text="@string/default_gp_key_value" />
 
             </LinearLayout>
@@ -244,18 +245,21 @@
 
                 <Button
                     android:id="@+id/updateBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/update" />
 
                 <Button
                     android:id="@+id/saveAsBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/save_as" />
 
                 <Button
                     android:id="@+id/deleteBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/delete" />

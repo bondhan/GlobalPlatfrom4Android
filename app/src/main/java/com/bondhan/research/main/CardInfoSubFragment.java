@@ -82,7 +82,7 @@ public class CardInfoSubFragment extends Fragment {
             {
                 info1.setText("Type A Card!");
                 info2.setText("UID = " + Util.htos(isodep.getTag().getId()));
-                info3.setText("Historical bytes: " + ((value == null) ? "None" : Util.htos(value)));
+                info3.setText("Historical bytes: " + ((Util.htos(value).isEmpty()) ? "None" : Util.htos(value)));
 
                 NfcA nfcaCard = NfcA.get(isodep.getTag());
 
@@ -93,7 +93,7 @@ public class CardInfoSubFragment extends Fragment {
             {
                 info1.setText("Type B Card!");
                 info2.setText("UID = " + Util.htos(isodep.getTag().getId()));
-                info3.setText("Hi Layer bytes: " + ((value == null) ? "None" : Util.htos(value)));
+                info3.setText("Hi Layer bytes: " + ((Util.htos(value).isEmpty()) ? "None" : Util.htos(value)));
 
                 NfcB nfcbCard = NfcB.get(isodep.getTag());
 

@@ -14,7 +14,8 @@ public class GlobalPlatformMainPagerAdapter extends FragmentPagerAdapter{
 
     private static CardInfoSubFragment tab0;
     private static CardContentsSubFragment tab1;
-    private static SetupGpSubFragment tab2;
+    private static GpCommandSubFragment tab2;
+    private static SetupGpSubFragment tab3;
 
     public GlobalPlatformMainPagerAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
@@ -26,19 +27,28 @@ public class GlobalPlatformMainPagerAdapter extends FragmentPagerAdapter{
         switch (position) {
             case 0:
                 if (tab0 == null) {
+                    //card info sub fragment
                     tab0 = new CardInfoSubFragment();
                 }
                 return tab0;
             case 1:
                 if (tab1 == null) {
+                    //content info sub fragment
                     tab1 = new CardContentsSubFragment();
                 }
                 return tab1;
             case 2:
                 if (tab2 == null) {
-                    tab2 = new SetupGpSubFragment();
+                    //content info sub fragment
+                    tab2 = new GpCommandSubFragment();
                 }
                 return tab2;
+            case 3:
+                if (tab3 == null) {
+                    //setup sub fragment
+                    tab3 = new SetupGpSubFragment();
+                }
+                return tab3;
 
             default:
                 return null;

@@ -26,7 +26,9 @@
                 style="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp" />
+                android:minWidth="100dp"
+                android:focusable="false"
+                android:longClickable="false" />
 
         </LinearLayout>
 
@@ -45,7 +47,9 @@
                 style="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp"/>
+                android:minWidth="100dp"
+                android:focusable="false"
+                android:longClickable="false" />
 
         </LinearLayout>
 
@@ -64,7 +68,9 @@
                 style="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp"/>
+                android:minWidth="100dp"
+                android:focusable="false"
+                android:longClickable="false" />
 
         </LinearLayout>
 
@@ -82,7 +88,9 @@
                 style="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp"/>
+                android:minWidth="100dp"
+                android:focusable="false"
+                android:longClickable="false" />
 
         </LinearLayout>
 
@@ -100,7 +108,9 @@
                 style="@style/EditTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp"/>
+                android:minWidth="100dp"
+                android:focusable="false"
+                android:longClickable="false" />
 
         </LinearLayout>
 

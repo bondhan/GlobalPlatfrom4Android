@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cardContentFragment"
+    tools:context="com.bondhan.research.main.GpCommandSubFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/card_contents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/initBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_update" />
+
+                <Button
+                    android:id="@+id/extAuthBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/extAuth" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@id/spacer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Commands" />
+
+                <Spinner
+                    android:id="@+id/apduCmdSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="50pt" />
+
+                <Button
+                    android:id="@+id/saveCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saveCmd" />
+
+                <Button
+                    android:id="@+id/updateCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/updateCmd" />
+
+                <Button
+                    android:id="@+id/deleteCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deleteCmd" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cla_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                    android:hint="@string/CLA"
+                    android:maxLength="2" />
+
+                <EditText
+                    android:id="@+id/ins_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                    android:hint="@string/INS"
+                    android:maxLength="2" />
+
+                <EditText
+                    android:id="@+id/p1_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                    android:hint="@string/P1"
+                    android:maxLength="2" />
+
+                <EditText
+                    android:id="@+id/p2_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                    android:hint="@string/P2"
+                    android:maxLength="2" />
+
+                <EditText
+                    android:id="@+id/len_editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
+                    android:hint="@string/LEN"
+                    android:maxLength="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DATA" />
+
+                <EditText
+                    android:id="@+id/data_cmd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="2"
+                    android:maxLines="6"
+                    android:scrollbars="vertical"
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

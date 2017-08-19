@@ -20,12 +20,14 @@
 
         <Button
             android:id="@+id/settingsBtnInfo"
+            style="@style/Base.Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Settings" />
 
         <Button
             android:id="@+id/cancelInfoBtn"
+            style="@style/Base.Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel" />

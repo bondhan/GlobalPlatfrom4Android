@@ -28,6 +28,7 @@ public class GlobalPlatformMainFragment extends Fragment {
     private TextView logView;
     private ScrollView scrollView;
     private ICommuncation mCallback;
+    private static boolean lastShownBool;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,9 +75,10 @@ public class GlobalPlatformMainFragment extends Fragment {
         Log.d(TAG, "On onViewCreated was called");
 
         final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Info"));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab1_title));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab2_title));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_info));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_content));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_command));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_setup));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
@@ -87,6 +89,12 @@ public class GlobalPlatformMainFragment extends Fragment {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+
+                if (tab.getPosition() == 2)
+                    lastShownBool = ((MainActivity) getActivity()).ismLogShown();
+                else
+                    ((MainActivity) getActivity()).setmLogShown(lastShownBool);
+
                 viewPager.setCurrentItem(tab.getPosition());
             }
 
