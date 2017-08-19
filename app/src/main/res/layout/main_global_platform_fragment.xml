@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/card_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+          android:id="@+id/tab_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+          android:id="@+id/viewpager"
+          android:layout_width="match_parent"
+          android:layout_height="0px"
+          android:layout_weight="1"
+          android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:id="@+id/log_window_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="0.5"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border"
+            android:padding="1dip">
+            <ScrollView
+                android:id="@+id/log_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/log_textview"
+                    android:gravity="bottom"
+                    android:textStyle="normal"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </ScrollView>
+        </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>

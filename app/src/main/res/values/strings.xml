@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Global Platform 4 Android</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="company_title">BN Research</string>
+    <string name="company_email">bondhan.novandy@gmail.com</string>
+
+    <string name="menu_gp_cards">Manage GP Card</string>
+    <string name="menu2">Menu 2</string>
+    <string name="menu_share">Share Trace</string>
+
+    <string name="show_log_action">Show Log</string>
+    <string name="hide_log_action">Hide Log</string>
+    <string name="title_activity_setup">SetupActivity</string>
+
+    <!-- Main screen string resources -->
+    <string name="main_frag_title">Android GP Tool</string>
+    <string name="main_frag_card_content">Contents:</string>
+
+    <!-- Setup screen string resources -->
+    <string name="setup_gp_frag_title">Setup</string>
+
+    <!-- Tab inside the Card manager fragment -->
+    <string name="tab1_title">Content</string>
+    <string name="tab2_title">Setup</string>
+
+    <!-- Fragment of card content -->
+    <string name="card_content_fragment">Card Contents Fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="setup_gp_fragment">Hello blank fragment</string>
+
+    <string name="last_selected_data"></string>
+
+    <string name="intro_message">Showing the contents of the card</string>
+    <string name="list_contents">List Contents</string>
+    <string name="authenticate">Authenticate</string>
+    <string name="delete">Delete</string>
+    <string name="save_as">Save As</string>
+    <string name="update">Update</string>
+    <string name="apdu_mode_tv">APDU Mode</string>
+    <string name="scp_mode_tv">SCP Mode</string>
+    <string name="key_derivation_mode">Key Derivation Mode</string>
+    <string name="kmc_ac">KMC AC</string>
+    <string name="kmc_mac">KMC MAC</string>
+    <string name="kmc_dek">KMC DEK</string>
+    <string name="global_platform_keys">Global Platform Keys</string>
+    <string name="default_cm_aid">A000000003000000</string>
+    <string name="card_manager_aid_tv">Card Manager AID</string>
+    <string name="gp_card">GP Card</string>
+    <string name="profiles_available">Profiles Available</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="default_gp_key_value">4142434445464748494A4B4C4D4E4F</string>
+
+</resources>
