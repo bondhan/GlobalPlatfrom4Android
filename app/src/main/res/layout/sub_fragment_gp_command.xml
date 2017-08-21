@@ -46,6 +46,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="left"
                 android:orientation="horizontal">
 
@@ -59,30 +60,20 @@
                     android:id="@+id/apduCmdSpinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
                     android:minWidth="50pt" />
 
-                <Button
-                    android:id="@+id/saveCmdBtn"
-                    style="@style/Base.Widget.AppCompat.Button.Small"
+                <EditText
+                    android:id="@+id/new_cmd_editText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/saveCmd" />
-
-                <Button
-                    android:id="@+id/updateCmdBtn"
-                    style="@style/Base.Widget.AppCompat.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/updateCmd" />
-
-                <Button
-                    android:id="@+id/deleteCmdBtn"
-                    style="@style/Base.Widget.AppCompat.Button.Small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/deleteCmd" />
+                    android:minWidth="50pt"
+                    android:layout_weight="0.5"
+                    android:hint="@string/NewCommand" />
 
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -132,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:digits="0123456789ABCDEF"
                     android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword"
-                    android:hint="@string/LEN"
+                    android:hint="@string/_00"
                     android:maxLength="2" />
             </LinearLayout>
 
@@ -140,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -151,11 +142,47 @@
                     android:id="@+id/data_cmd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minLines="2"
-                    android:maxLines="6"
+                    android:minLines="1"
+                    android:maxLines="3"
                     android:scrollbars="vertical"
                     android:digits="0123456789ABCDEF"
                     android:inputType="textCapCharacters|textNoSuggestions|textVisiblePassword" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sendCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sendCmd" />
+
+                <Button
+                    android:id="@+id/saveCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saveCmd" />
+
+                <Button
+                    android:id="@+id/updateCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/updateCmd" />
+
+                <Button
+                    android:id="@+id/deleteCmdBtn"
+                    style="@style/Base.Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deleteCmd" />
 
             </LinearLayout>
 

@@ -221,6 +221,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         if (id == R.id.action_toggle_log)
         {
+            mLogShown = !mLogShown;
+
             showOutputLog(false);
 
             supportInvalidateOptionsMenu();
@@ -234,13 +236,9 @@ public class MainActivity extends AppCompatActivity
     public void showOutputLog(boolean show) {
         LinearLayout output = (LinearLayout) findViewById(R.id.log_window_layout);
 
-        mLogShown = !mLogShown;
-
         if (mLogShown || show) {
-
             output.setVisibility(LinearLayout.VISIBLE);
         } else {
-
             output.setVisibility(LinearLayout.GONE);
         }
     }

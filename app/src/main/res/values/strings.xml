@@ -67,5 +67,8 @@
     <string name="saveCmd">Save</string>
     <string name="updateCmd">Update</string>
     <string name="deleteCmd">Delete</string>
+    <string name="NewCommand">Command Name</string>
+    <string name="sendCmd">Send</string>
+    <string name="_00">00</string>
 
 </resources>

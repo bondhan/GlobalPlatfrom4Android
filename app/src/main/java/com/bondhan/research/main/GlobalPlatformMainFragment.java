@@ -90,10 +90,16 @@ public class GlobalPlatformMainFragment extends Fragment {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 
-                if (tab.getPosition() == 2)
+//                if (tab.getPosition() == 2) {
+//                    lastShownBool = ((MainActivity) getActivity()).ismLogShown();
+//                }
+//                else
+//                    ((MainActivity) getActivity()).showOutputLog(lastShownBool);
+
+                if (tab.getPosition() != 2) {
                     lastShownBool = ((MainActivity) getActivity()).ismLogShown();
-                else
-                    ((MainActivity) getActivity()).setmLogShown(lastShownBool);
+                    ((MainActivity) getActivity()).showOutputLog(lastShownBool);
+                }
 
                 viewPager.setCurrentItem(tab.getPosition());
             }
